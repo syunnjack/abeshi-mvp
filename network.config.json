@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "language": "ja",
+  "timezone": "Asia/Tokyo",
+  "operator": {
+    "name": "",
+    "legalName": "",
+    "contactEmail": "",
+    "country": "JP"
+  },
+  "publishing": {
+    "defaultStatus": "draft",
+    "indexDrafts": false,
+    "requireHumanReview": true,
+    "requiredArticleFields": ["title", "description", "answer", "sections", "sources", "author", "reviewedAt"]
+  },
+  "monetization": {
+    "enabled": false,
+    "disclosure": "このサイトには広告・アフィリエイトリンクが含まれる場合があります。広告報酬は評価順位を決定しません。",
+    "clickEvent": "affiliate_click"
+  },
+  "analytics": {
+    "provider": "none",
+    "siteIds": {}
+  },
+  "contact": {
+    "formUrl": ""
+  }
+}
+
