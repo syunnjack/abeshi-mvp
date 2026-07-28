@@ -1,0 +1,22 @@
+{
+  "tech-stack": {"accent":"#3b6df6","surface":"#eef3ff","ink":"#102044","tone":"Digital cobalt"},
+  "business-ops": {"accent":"#0f7b6c","surface":"#e9f7f3","ink":"#12332e","tone":"Operational teal"},
+  "work-career": {"accent":"#d35b32","surface":"#fff1ea","ink":"#402117","tone":"Career terracotta"},
+  "learning": {"accent":"#7654c7","surface":"#f2edff","ink":"#2e2051","tone":"Learning violet"},
+  "home-appliance": {"accent":"#e54b32","surface":"#fff0ec","ink":"#30201c","tone":"Measurement red"},
+  "travel": {"accent":"#167fa8","surface":"#eaf7fb","ink":"#143743","tone":"Route blue"},
+  "home-living": {"accent":"#8a6836","surface":"#f6f0e7","ink":"#34291c","tone":"Living umber"},
+  "outdoor": {"accent":"#367742","surface":"#edf6ed","ink":"#1c3821","tone":"Trail green"},
+  "beauty": {"accent":"#bd496e","surface":"#fff0f4","ink":"#49202e","tone":"Evidence rose"},
+  "mobility": {"accent":"#5964d8","surface":"#eef0ff","ink":"#232747","tone":"Mobility indigo"},
+  "food": {"accent":"#b85f19","surface":"#fff3e8","ink":"#3b2413","tone":"Taste amber"},
+  "hobby-entertainment": {"accent":"#7b48b4","surface":"#f5eeff","ink":"#302040","tone":"Signal purple"},
+  "pet-life": {"accent":"#3e8976","surface":"#eaf8f3","ink":"#1d3932","tone":"Care mint"},
+  "local-guide": {"accent":"#c54832","surface":"#fff0ec","ink":"#43231d","tone":"City vermilion"},
+  "health-fitness": {"accent":"#287f65","surface":"#e9f7f1","ink":"#183b31","tone":"Wellness green"},
+  "matching": {"accent":"#b44b83","surface":"#fff0f8","ink":"#452038","tone":"Relation magenta"},
+  "parenting": {"accent":"#dc7640","surface":"#fff2e9","ink":"#42291d","tone":"Family orange"},
+  "finance-tools": {"accent":"#286a82","surface":"#eaf5f8","ink":"#18333d","tone":"Finance slate"},
+  "adult": {"accent":"#a32936","surface":"#f9edef","ink":"#321a1e","tone":"Private burgundy"}
+}
+
