@@ -1,0 +1,193 @@
+[
+  {
+    "site": "tech-stack",
+    "slug": "security",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"Proton Pass","provider":"Proton","fit":"cost","type":"パスワード管理サービス","price":"無料プランあり。上位プランは公式で確認","url":"https://proton.me/pass/pricing","reason":"まず費用をかけず、パスワードの使い回しを減らしたい人が試しやすい候補です。","caution":"必要な端末数、共有、復旧方法、上位機能を確認してください。"},
+      {"name":"Bitwarden","provider":"Bitwarden","fit":"balance","type":"パスワード管理サービス","price":"無料・有料プランあり。公式で確認","url":"https://bitwarden.com/ja-jp/pricing/","reason":"複数端末での利用と費用のバランスを比べたい人向けの候補です。","caution":"組織共有や緊急アクセスなど、必要機能がどのプランに含まれるか確認してください。"},
+      {"name":"1Password","provider":"1Password","fit":"assurance","type":"パスワード管理サービス","price":"有料サブスクリプション。公式で確認","url":"https://1password.com/jp/pricing","reason":"家族・チーム共有やサポートを含めて管理方法を整えたい人向けの候補です。","caution":"無料試用後の料金、家族・法人プランの違い、復旧手順を確認してください。"}
+    ]
+  },
+  {
+    "site": "business-ops",
+    "slug": "payment-terminals",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"Square","provider":"Square","fit":"cost","type":"キャッシュレス決済","price":"端末・決済手数料は公式で確認","url":"https://squareup.com/jp/ja/payments/our-fees","reason":"小規模店舗で、必要な端末と決済から段階的に始めたい場合の候補です。","caution":"対面・オンラインで手数料が異なるため、想定売上で総額を確認してください。"},
+      {"name":"STORES 決済","provider":"STORES","fit":"balance","type":"キャッシュレス決済","price":"プラン・端末・手数料は公式で確認","url":"https://stores.fun/payments","reason":"店舗運営サービスとの連携も含めて費用と使いやすさを比べたい場合の候補です。","caution":"契約プラン、入金サイクル、対応ブランド、解約条件を確認してください。"},
+      {"name":"Airペイ","provider":"リクルート","fit":"assurance","type":"キャッシュレス決済","price":"キャンペーン・手数料は公式で確認","url":"https://airregi.jp/payment/","reason":"決済手段、周辺サービス、相談窓口までまとめて確認したい場合の候補です。","caution":"利用には審査があります。必要機器、入金、対応OSの条件を確認してください。"}
+    ]
+  },
+  {
+    "site": "work-career",
+    "slug": "side-business",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"ココナラ","provider":"ココナラ","fit":"cost","type":"スキル出品サービス","price":"登録無料。販売手数料は公式で確認","url":"https://coconala.com/","reason":"自分の得意分野を小さなサービスとして出品して試したい人向けの候補です。","caution":"手数料、禁止行為、納品範囲、本業の就業規則を確認してください。"},
+      {"name":"ランサーズ","provider":"ランサーズ","fit":"balance","type":"クラウドソーシング","price":"登録無料。手数料は公式で確認","url":"https://www.lancers.jp/","reason":"案件への応募と継続受注の両方を検討したい人向けの候補です。","caution":"契約形式、仮払い、源泉徴収、業務範囲を案件ごとに確認してください。"},
+      {"name":"クラウドワークス","provider":"クラウドワークス","fit":"assurance","type":"クラウドソーシング","price":"登録無料。手数料は公式で確認","url":"https://crowdworks.jp/","reason":"案件数、仮払い、相談窓口を含めて候補を比較したい人向けです。","caution":"高額教材への誘導、外部連絡先への移動、先払い要求には注意してください。"}
+    ]
+  },
+  {
+    "site": "learning",
+    "slug": "certifications",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"教育訓練給付制度 検索システム","provider":"厚生労働省","fit":"cost","type":"対象講座検索","price":"無料","url":"https://www.kyufu.mhlw.go.jp/kensaku/","reason":"給付対象になり得る講座を先に絞り、自己負担を確認したい人向けです。","caution":"受給資格と対象期間は個人で異なるため、ハローワークでも確認してください。"},
+      {"name":"スタディング","provider":"KIYOラーニング","fit":"balance","type":"オンライン資格講座","price":"講座ごとに異なるため公式で確認","url":"https://studying.jp/","reason":"スマートフォン中心で学習時間と費用のバランスを取りたい人向けの候補です。","caution":"質問対応、教材形式、受講期限、給付対象の有無を講座ごとに確認してください。"},
+      {"name":"ユーキャン","provider":"ユーキャン","fit":"assurance","type":"通信教育・資格講座","price":"講座ごとに異なるため公式で確認","url":"https://www.u-can.co.jp/","reason":"紙・オンライン教材や学習サポートも含めて検討したい人向けの候補です。","caution":"合格を保証するものではありません。添削、質問回数、受講期限を確認してください。"}
+    ]
+  },
+  {
+    "site": "home-appliance",
+    "slug": "air-conditioners",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"霧ヶ峰 GEシリーズ","provider":"三菱電機","fit":"cost","type":"ルームエアコン","price":"オープン価格。販売店で確認","url":"https://www.mitsubishielectric.co.jp/home/kirigamine/product/","reason":"基本機能を中心に、部屋の広さに合う標準モデルから検討したい人向けです。","caution":"本体だけでなく標準工事、電源工事、配管延長、撤去費まで見積もってください。"},
+      {"name":"エオリア 2026年 Xシリーズ","provider":"Panasonic","fit":"balance","type":"ルームエアコン","price":"オープン価格。販売店で確認","url":"https://panasonic.jp/aircon/Xseries.html","reason":"省エネ、清潔機能、使いやすさをまとめて比べたい人向けの候補です。","caution":"畳数別の期間消費電力量と設置寸法を、実際の部屋条件で確認してください。"},
+      {"name":"うるさらX Rシリーズ","provider":"ダイキン工業","fit":"assurance","type":"ルームエアコン","price":"オープン価格。販売店で確認","url":"https://www.ac.daikin.co.jp/roomaircon/products/r_series","reason":"加湿・除湿・省エネなどの上位機能を含め、長期使用で検討したい人向けです。","caution":"室外機寸法、加湿条件、換気量、地域の低温条件、工事費を確認してください。"}
+    ]
+  },
+  {
+    "site": "travel",
+    "slug": "hotels",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"楽天トラベル","provider":"楽天グループ","fit":"cost","type":"宿泊予約サービス","price":"宿泊施設・プランごとに異なる","url":"https://travel.rakuten.co.jp/","reason":"日程と地域を決め、価格やクーポンを含めて広く探したい人向けの候補です。","caution":"税・サービス料、現地払い、キャンセル料、ポイント条件を確認してください。"},
+      {"name":"じゃらんnet","provider":"リクルート","fit":"balance","type":"宿泊予約サービス","price":"宿泊施設・プランごとに異なる","url":"https://www.jalan.net/","reason":"宿泊条件、口コミ、周辺情報を見ながら候補を比較したい人向けです。","caution":"口コミだけで決めず、部屋条件と最新の宿泊規約を施設側でも確認してください。"},
+      {"name":"JTB 国内旅行","provider":"JTB","fit":"assurance","type":"旅行予約・相談","price":"商品・相談内容ごとに異なる","url":"https://www.jtb.co.jp/kokunai-hotel/","reason":"交通との組合せや相談窓口も含めて旅行全体を決めたい人向けの候補です。","caution":"募集型企画旅行と手配旅行の違い、取消料、変更条件を確認してください。"}
+    ]
+  },
+  {
+    "site": "home-living",
+    "slug": "disaster-preparedness",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"いつものもしも","provider":"無印良品","fit":"cost","type":"防災用品・備蓄食品","price":"単品・セット価格は公式で確認","url":"https://www.muji.com/jp/ja/store/cmdty/section/D00027?sort=new","reason":"普段使う日用品とローリングストックから少しずつ備えたい人向けです。","caution":"セットだけで完結させず、水・食料を人数×日数で別途計算してください。"},
+      {"name":"基本の防災リュック","provider":"アイリスオーヤマ","fit":"balance","type":"防災用品","price":"販売価格は公式販売店で確認","url":"https://www.irisohyama.co.jp/news/2025/0807_2.pdf","reason":"基本用品をベースに、自分で食品や必需品を追加したい人向けです。","caution":"賞味期限、アレルギー、バッグ重量、電池の別売有無を確認してください。"},
+      {"name":"SHELTER 防災セット","provider":"LA・PITA","fit":"assurance","type":"防災セット","price":"構成・人数により異なるため公式で確認","url":"https://lapita.co.jp/company/product/product02","reason":"セット内容を細かく確認し、持出しやすさも含めて選びたい人向けです。","caution":"住地域の災害想定、乳幼児・高齢者・ペットの個別用品を追加してください。"}
+    ]
+  },
+  {
+    "site": "outdoor",
+    "slug": "mountaineering",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"コンパス","provider":"インフカム","fit":"cost","type":"登山届・安全情報","price":"基本機能と料金は公式で確認","url":"https://www.mt-compass.com/","reason":"登山届を提出し、計画と緊急連絡先を整理したい人向けの候補です。","caution":"提出だけで安全は保証されません。天候・装備・下山連絡も別途確認してください。"},
+      {"name":"YAMAP","provider":"ヤマップ","fit":"balance","type":"登山地図アプリ","price":"無料・有料プランあり。公式で確認","url":"https://yamap.com/plans","reason":"オフライン地図、活動記録、計画をスマートフォンでまとめたい人向けです。","caution":"予備電源と紙地図を用意し、通信や端末だけに依存しないでください。"},
+      {"name":"COCOHELI","provider":"AUTHENTIC JAPAN","fit":"assurance","type":"会員制捜索支援サービス","price":"入会金・年会費は公式で確認","url":"https://www.cocoheli.com/","reason":"遭難時の位置特定支援を追加し、安全対策を厚くしたい人向けです。","caution":"救助そのものを保証するサービスではありません。補償範囲と捜索手順を確認してください。"}
+    ]
+  },
+  {
+    "site": "beauty",
+    "slug": "cosmetics",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"マツキヨココカラ オンラインストア","provider":"マツキヨココカラ＆カンパニー","fit":"cost","type":"化粧品通販","price":"商品ごとに異なる","url":"https://www.matsukiyococokara-online.com/","reason":"日用品と一緒に、身近な価格帯の商品を公式流通で探したい人向けです。","caution":"成分、使用期限、返品条件を確認し、肌に異常があれば使用を中止してください。"},
+      {"name":"@cosme SHOPPING","provider":"アイスタイルリテール","fit":"balance","type":"化粧品通販","price":"商品ごとに異なる","url":"https://www.cosme.com/","reason":"ブランド、価格帯、口コミを横断して候補を比べたい人向けです。","caution":"口コミは個人差があります。広告表示と正規販売元、全成分を確認してください。"},
+      {"name":"DEPACO","provider":"大丸松坂屋百貨店","fit":"assurance","type":"百貨店化粧品通販","price":"商品ごとに異なる","url":"https://depaco.daimaru-matsuzakaya.jp/","reason":"百貨店取扱ブランドや美容情報も含め、購入先の確認を重視したい人向けです。","caution":"肌への適合を保証するものではありません。使用方法と相談窓口を確認してください。"}
+    ]
+  },
+  {
+    "site": "mobility",
+    "slug": "ev-charging",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"ELSEEV","provider":"Panasonic","fit":"cost","type":"家庭・施設向けEV充電設備","price":"機器・工事費は見積もり","url":"https://sumai.panasonic.jp/wiring/elseev/","reason":"自宅の普通充電を中心に、機器構成をシンプルに検討したい場合の候補です。","caution":"分電盤容量、配線距離、補助金、車両コネクターを施工店に確認してください。"},
+      {"name":"DMM EV CHARGE","provider":"DMM.com","fit":"balance","type":"施設向けEV充電サービス","price":"導入条件・利用料金は公式で確認","url":"https://ev-charge.dmm.com/","reason":"集合住宅や施設で、導入と運用を一体で検討したい場合の候補です。","caution":"設置主体、補助金条件、利用者料金、保守期間を確認してください。"},
+      {"name":"Terra Charge","provider":"Terra Charge","fit":"assurance","type":"施設向けEV充電サービス","price":"導入条件・利用料金は公式で確認","url":"https://terra-charge.com/","reason":"設置後の運用やサポートも含めて施設導入を比較したい場合の候補です。","caution":"契約期間、故障対応、アプリ、利用可能車種、電気設備条件を確認してください。"}
+    ]
+  },
+  {
+    "site": "food",
+    "slug": "meal-delivery",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"ワタミの宅食ダイレクト","provider":"ワタミ","fit":"cost","type":"冷凍宅配食","price":"セット・定期条件は公式で確認","url":"https://www.watami-takushoku-direct.jp/","reason":"食数と費用を抑えながら冷凍弁当を試したい人向けの候補です。","caution":"送料、最低食数、定期購入、アレルギー表示、冷凍庫容量を確認してください。"},
+      {"name":"nosh","provider":"ナッシュ","fit":"balance","type":"冷凍宅配食","price":"食数・配送間隔で異なるため公式で確認","url":"https://nosh.jp/","reason":"メニュー選択と配送頻度を自分で調整したい人向けの候補です。","caution":"送料と停止・解約方法、栄養成分、アレルギー情報を毎回確認してください。"},
+      {"name":"三ツ星ファーム","provider":"イングリウッド","fit":"assurance","type":"冷凍宅配食","price":"食数・プランで異なるため公式で確認","url":"https://mitsuboshifarm.jp/","reason":"メニュー数や食事の満足感も重視して定期利用を検討したい人向けです。","caution":"医療食ではありません。持病や食事制限がある場合は専門家に相談してください。"}
+    ]
+  },
+  {
+    "site": "hobby-entertainment",
+    "slug": "video-streaming",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"Prime Video","provider":"Amazon","fit":"cost","type":"動画配信サービス","price":"会員・広告表示条件は公式で確認","url":"https://www.amazon.co.jp/gp/video/storefront/","reason":"買い物など他の会員特典と合わせて動画を利用したい人向けの候補です。","caution":"見放題対象外のレンタル・購入と、広告なしオプションの料金を確認してください。"},
+      {"name":"Netflix","provider":"Netflix","fit":"balance","type":"動画配信サービス","price":"プラン料金は公式で確認","url":"https://www.netflix.com/jp/","reason":"オリジナル作品と複数の画質・同時視聴プランから選びたい人向けです。","caution":"プランごとの広告、画質、同時視聴数、追加メンバー条件を確認してください。"},
+      {"name":"U-NEXT","provider":"U-NEXT","fit":"assurance","type":"動画配信サービス","price":"月額・ポイント条件は公式で確認","url":"https://video.unext.jp/","reason":"動画に加えて電子書籍や家族利用もまとめて検討したい人向けです。","caution":"無料期間終了日、ポイント対象外、同時再生の制限、解約方法を確認してください。"}
+    ]
+  },
+  {
+    "site": "pet-life",
+    "slug": "pet-food",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"ピュリナ ワン","provider":"ネスレ ピュリナ","fit":"cost","type":"犬・猫用総合栄養食","price":"種類・容量・販売店で異なる","url":"https://nestle.jp/brand/purina/purinaone/","reason":"年齢と体格に合う総合栄養食を身近な価格帯から比較したい場合の候補です。","caution":"犬猫の別、年齢、給与量、原材料、体調変化を確認してください。"},
+      {"name":"サイエンス・ダイエット","provider":"日本ヒルズ・コルゲート","fit":"balance","type":"犬・猫用ペットフード","price":"種類・容量・販売店で異なる","url":"https://www.hills.co.jp/","reason":"ライフステージや体重管理などの目的別に選びたい場合の候補です。","caution":"療法食とは異なります。病気やアレルギーが疑われる場合は獣医師に相談してください。"},
+      {"name":"ロイヤルカナン","provider":"ロイヤルカナン ジャポン","fit":"assurance","type":"犬・猫用ペットフード","price":"製品・容量・販売店で異なる","url":"https://www.royalcanin.com/jp","reason":"品種、年齢、健康状態まで細かく確認して選びたい場合の候補です。","caution":"食事療法食は獣医師の診断と指導に従って使用してください。"}
+    ]
+  },
+  {
+    "site": "local-guide",
+    "slug": "restaurants",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"Google マップ","provider":"Google","fit":"cost","type":"地図・店舗検索","price":"無料","url":"https://www.google.com/maps","reason":"現在地、営業時間、経路から近くの候補を広く探したい人向けです。","caution":"営業時間や閉店情報は変わるため、店舗の公式情報や電話でも確認してください。"},
+      {"name":"食べログ","provider":"カカクコム","fit":"balance","type":"飲食店検索・予約","price":"検索無料。有料サービスは公式で確認","url":"https://tabelog.com/","reason":"料理、価格帯、口コミ、予約可否をまとめて比較したい人向けです。","caution":"評価点だけで決めず、最新メニュー、アレルギー対応、キャンセル条件を確認してください。"},
+      {"name":"TableCheck","provider":"TableCheck","fit":"assurance","type":"飲食店予約サービス","price":"店舗・予約条件により異なる","url":"https://www.tablecheck.com/ja/japan","reason":"日時、人数、コース、キャンセル条件を明確にして予約したい人向けです。","caution":"デポジット、キャンセル料、食事制限の連絡方法を予約画面で確認してください。"}
+    ]
+  },
+  {
+    "site": "health-fitness",
+    "slug": "sleep",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"Pokémon Sleep","provider":"The Pokémon Company","fit":"cost","type":"睡眠ゲーム・記録アプリ","price":"基本プレイ無料。課金要素は公式で確認","url":"https://www.pokemonsleep.net/","reason":"まず睡眠時間を意識する習慣を、楽しみながら作りたい人向けです。","caution":"医療機器ではありません。記録値だけで睡眠障害を自己診断しないでください。"},
+      {"name":"Sleep Cycle","provider":"Sleep Cycle AB","fit":"balance","type":"睡眠記録アプリ","price":"無料・有料機能あり。公式で確認","url":"https://www.sleepcycle.com/","reason":"睡眠時間やいびきなどの傾向を継続して振り返りたい人向けです。","caution":"端末や計測条件で結果が変わります。強い眠気や呼吸の異常は医療機関に相談してください。"},
+      {"name":"Oura Ring 4","provider":"Oura Health","fit":"assurance","type":"ウェアラブルリング","price":"本体・メンバーシップ料金は公式で確認","url":"https://ouraring.com/ja","reason":"睡眠だけでなく活動や回復も継続計測し、詳しく振り返りたい人向けです。","caution":"医師の診断を代替しません。サイズ、充電、月額費用、データ取扱いを確認してください。"}
+    ]
+  },
+  {
+    "site": "matching",
+    "slug": "dating-services",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"Omiai","provider":"Omiai","fit":"cost","type":"マッチングサービス","price":"性別・プラン・期間で異なるため公式で確認","url":"https://fb.omiai-jp.com/","reason":"利用目的と本人確認の仕組みを確認しながら候補を探したい人向けです。","caution":"サービス外への誘導、投資勧誘、送金要求には応じないでください。"},
+      {"name":"with","provider":"with","fit":"balance","type":"マッチングサービス","price":"性別・プラン・期間で異なるため公式で確認","url":"https://with.is/","reason":"価値観やコミュニケーションの相性も含めて探したい人向けです。","caution":"本人確認は安全を保証しません。個人情報の開示と対面場所に注意してください。"},
+      {"name":"Pairs","provider":"エウレカ","fit":"assurance","type":"マッチングサービス","price":"性別・プラン・期間で異なるため公式で確認","url":"https://www.pairs.lv/","reason":"会員層、検索条件、安全対策、相談窓口をまとめて比較したい人向けです。","caution":"違反報告・ブロック手順を確認し、不審な相手とは連絡を中止してください。"}
+    ]
+  },
+  {
+    "site": "parenting",
+    "slug": "baby-products",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"KATOJI ベビーベッド","provider":"カトージ","fit":"cost","type":"ベビーベッド製品一覧","price":"製品ごとに異なるため公式で確認","url":"https://www.katoji.co.jp/products","reason":"設置寸法と基本機能を確認し、木製ベッドを比較したい家庭向けです。","caution":"現物の子供PSCマーク、使用月齢、床板、柵、マットレス寸法を確認してください。"},
+      {"name":"ココネル エアー AB","provider":"アップリカ","fit":"balance","type":"折りたたみベビーベッド","price":"メーカー希望小売価格29,700円（税込）","url":"https://www.aprica.jp/products/home/detail/bed/coconel_air_ab/","reason":"PSC・SG表示と、折りたたみ・移動のしやすさを両方重視する家庭向けです。","caution":"使用期間、体重上限、つかまり立ち後の床板位置、寝具サイズを確認してください。"},
+      {"name":"ココネル シリーズ比較","provider":"アップリカ","fit":"assurance","type":"ベビーベッド比較","price":"モデルごとに異なるため公式で確認","url":"https://www.aprica.jp/products/bed/comparison/","reason":"素材、通気性、手入れ、持ち運びまで公式比較表で選びたい家庭向けです。","caution":"安全マークだけでなく、組立て、隙間、寝具、使用場所の注意事項も守ってください。"}
+    ]
+  },
+  {
+    "site": "finance-tools",
+    "slug": "household-budgeting",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"OsidOri","provider":"OsidOri","fit":"cost","type":"家計簿・夫婦共有アプリ","price":"無料・有料プランあり。公式で確認","url":"https://www.osidori.co/","reason":"個人用と家族共有の支出を分けて、まず家計を見える化したい人向けです。","caution":"金融機関連携の範囲、有料機能、共有相手に見える情報を確認してください。"},
+      {"name":"Zaim","provider":"くふうカンパニー","fit":"balance","type":"家計簿アプリ","price":"無料・有料プランあり。公式で確認","url":"https://zaim.net/","reason":"レシートや金融機関連携を使い、日々の支出を継続して整理したい人向けです。","caution":"自動分類は誤る場合があります。口座権限とプライバシー設定を確認してください。"},
+      {"name":"マネーフォワード ME","provider":"マネーフォワードホーム","fit":"assurance","type":"家計簿・資産管理アプリ","price":"無料・有料プランあり。公式で確認","url":"https://moneyforward.com/me","reason":"複数口座、カード、資産をまとめ、長期的に家計を確認したい人向けです。","caution":"表示は助言ではありません。連携範囲、更新頻度、退会時のデータを確認してください。"}
+    ]
+  },
+  {
+    "site": "adult",
+    "slug": "adult-streaming",
+    "checkedAt": "2026-07-29",
+    "candidates": [
+      {"name":"DUGA PPV","provider":"アペックス","fit":"cost","type":"成人向け動画の単品購入・レンタル","price":"作品ごとに異なる。会員登録は公式案内で確認","url":"https://duga.jp/info/guide/","reason":"月額契約を避け、見たい作品だけ都度購入したい成人向けの候補です。","caution":"18歳未満は利用できません。決済表示、対応端末、再生期限、退会方法を確認してください。"},
+      {"name":"FANZA TV","provider":"DMM.com","fit":"balance","type":"成人向け見放題サービス","price":"DMMプレミアム月額550円。追加プランは公式で確認","url":"https://support.dmm.co.jp/fanza-tv/article/47686","reason":"低めの月額で見放題を試し、継続費用を管理したい成人向けの候補です。","caution":"18歳未満は利用できません。追加料金、請求名義、解約日、視聴履歴を確認してください。"},
+      {"name":"FANZA 月額動画","provider":"DMM.com","fit":"assurance","type":"成人向けチャンネル型動画配信","price":"チャンネルごとに異なるため公式で確認","url":"https://support.dmm.co.jp/monthly/article/36302","reason":"ジャンル・メーカー別のチャンネルと公式サポートを確認して選びたい成人向けです。","caution":"18歳未満は利用できません。自動更新、最大料金、支払い方法、解約後の再生可否を確認してください。"}
+    ]
+  }
+]
+
