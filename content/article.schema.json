@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scarlet.local/schemas/article.json",
+  "title": "SCARLET Network Article",
+  "type": "object",
+  "required": ["site", "slug", "title", "description", "answer", "sections", "sources", "author", "reviewedAt", "status"],
+  "properties": {
+    "site": {"type":"string"},
+    "slug": {"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type":"string","minLength":10},
+    "description": {"type":"string","minLength":40,"maxLength":180},
+    "answer": {"type":"string","minLength":80},
+    "sections": {"type":"array","minItems":2,"items":{"type":"object","required":["heading","body"],"properties":{"heading":{"type":"string"},"body":{"type":"string"}}}},
+    "sources": {"type":"array","minItems":2,"items":{"type":"object","required":["label","url","checkedAt"],"properties":{"label":{"type":"string"},"url":{"type":"string","format":"uri"},"checkedAt":{"type":"string","format":"date"}}}},
+    "author": {"type":"string","minLength":1},
+    "reviewer": {"type":"string"},
+    "reviewedAt": {"type":"string","format":"date"},
+    "status": {"enum":["draft","review","published"]},
+    "mature": {"type":"boolean"}
+  }
+}
+
