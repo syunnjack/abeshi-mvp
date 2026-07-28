@@ -1,0 +1,71 @@
+{
+  "recordedAt": "2026-07-29",
+  "currency": "JPY",
+  "taxIncluded": true,
+  "status": "受付完了",
+  "pricingProfiles": {
+    "jp": {
+      "termYears": 1,
+      "registration": 1860,
+      "whoisPrivacy": 0,
+      "serviceAdjustment": 493,
+      "firstYearTotal": 2353
+    },
+    "com": {
+      "termYears": 1,
+      "registration": 750,
+      "whoisPrivacy": 0,
+      "serviceAdjustment": 199,
+      "firstYearTotal": 949
+    }
+  },
+  "domains": [
+    {"domain":"beauty-evidence.jp","vertical":"beauty","role":"primary","profile":"jp"},
+    {"domain":"city-field.jp","vertical":"local-guide","role":"primary","profile":"jp"},
+    {"domain":"city-field.com","vertical":"local-guide","role":"redirect","profile":"com"},
+    {"domain":"family-choice.jp","vertical":"parenting","role":"primary","profile":"jp"},
+    {"domain":"hobby-signal.jp","vertical":"hobby-entertainment","role":"primary","profile":"jp"},
+    {"domain":"hobby-signal.com","vertical":"hobby-entertainment","role":"redirect","profile":"com"},
+    {"domain":"learnmap.jp","vertical":"learning","role":"primary","profile":"jp"},
+    {"domain":"living-field.jp","vertical":"home-living","role":"primary","profile":"jp"},
+    {"domain":"living-field.com","vertical":"home-living","role":"redirect","profile":"com"},
+    {"domain":"money-operations.jp","vertical":"finance-tools","role":"primary","profile":"jp"},
+    {"domain":"move-check.jp","vertical":"mobility","role":"primary","profile":"jp"},
+    {"domain":"move-check.com","vertical":"mobility","role":"redirect","profile":"com"},
+    {"domain":"ops-select.jp","vertical":"business-ops","role":"primary","profile":"jp"},
+    {"domain":"ops-select.com","vertical":"business-ops","role":"redirect","profile":"com"},
+    {"domain":"outdoor-test.jp","vertical":"outdoor","role":"primary","profile":"jp"},
+    {"domain":"pet-standard.jp","vertical":"pet-life","role":"primary","profile":"jp"},
+    {"domain":"private-select.jp","vertical":"adult","role":"primary","profile":"jp"},
+    {"domain":"relation-guide.jp","vertical":"matching","role":"primary","profile":"jp"},
+    {"domain":"relation-guide.com","vertical":"matching","role":"redirect","profile":"com"},
+    {"domain":"route-note.jp","vertical":"travel","role":"primary","profile":"jp"},
+    {"domain":"stackwise.jp","vertical":"tech-stack","role":"primary","profile":"jp"},
+    {"domain":"taste-log.jp","vertical":"food","role":"primary","profile":"jp"},
+    {"domain":"taste-log.com","vertical":"food","role":"redirect","profile":"com"},
+    {"domain":"wellness-check.jp","vertical":"health-fitness","role":"primary","profile":"jp"},
+    {"domain":"workshift-guide.jp","vertical":"work-career","role":"primary","profile":"jp"},
+    {"domain":"workshift-guide.com","vertical":"work-career","role":"redirect","profile":"com"}
+  ],
+  "missingPrimaryDomains": ["home-lab.jp"],
+  "unacquiredPremiumDomains": [
+    {
+      "domain": "home-lab.com",
+      "reason": "premium_price",
+      "action": "取得せず、主候補home-lab.jpの取得可否を優先確認"
+    },
+    {
+      "domain": "family-choice.com",
+      "reason": "premium_price_and_registered",
+      "action": "取得せずfamily-choice.jpを正規ドメインとして使用",
+      "optionalAlternative": "familychoice-guide.com"
+    }
+  ],
+  "notes": [
+    ".jpを正規ドメインとして使用する",
+    ".comは対応する.jpへ301リダイレクトする",
+    "更新時の料金は取得時の表示額と異なる可能性があるため更新前に再確認する",
+    "プレミアム.comは取得せず、既存.jpの運営・コンテンツ・被リンクへ予算を優先する"
+  ]
+}
+
