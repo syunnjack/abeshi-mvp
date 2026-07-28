@@ -1,6 +1,26 @@
-# SCARLET Content OS
 
-阿部氏の「無双マイスター」のコンテンツ組成思想を、現代の SEO / AIO / LLMO に合わせて再設計した汎用MVPです。
+# SCARLET Site System MVP
+
+阿部氏の「無双マイスター」のコンテンツ組成思想を、現代の SEO / AIO / LLMO に合わせて再設計した、実際に公開サイト一式を生成する汎用MVPです。
+
+## 生成される公開サイト
+
+`content/pages/*.json` と `site.config.json` を入力として、`generated-site/` に次を生成します。
+
+- 公開トップページ、記事、カテゴリ、編集方針ページ
+- 直接回答、検証方法、比較表、FAQ、出典、関連記事
+- Article / FAQPage / BreadcrumbList / Organization JSON-LD
+- canonical、OGP、description、公開日・更新日・著者情報
+- sitemap.xml、robots.txt、RSS、llms.txt
+- クライアント内サイト検索用インデックス
+- PWA manifest、レスポンシブCSS
+
+```bash
+npm run build:site
+npm run serve:site
+```
+
+生成前検証は `node scripts/generate-site.mjs --check` で実行できます。必須項目不足とslug重複がある場合は失敗します。
 
 ## 原型から継承したもの
 

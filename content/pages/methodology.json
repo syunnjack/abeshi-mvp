@@ -1,0 +1,15 @@
+
+{
+  "slug": "measurement-policy", "title": "FIELDNOTEの検証・採点ポリシー", "description": "製品比較と実践ガイドで用いる測定、採点、更新、広告表示の基本方針。", "category": "guide", "categoryLabel": "編集方針", "published": "2026-07-20", "updated": "2026-07-29", "author": "FIELDNOTE編集部",
+  "hero": { "label": "OPEN METHOD", "metric": "5 RULES", "caption": "再現できる検証" },
+  "answer": "FIELDNOTEは、比較条件、測定方法、提供品の有無、更新日、判断できない点を記事内に明記します。点数だけで結論を隠さず、読者が自分の条件へ置き換えられる情報を優先します。",
+  "method": "測定は原則3回行い中央値を記録します。主観評価は2名以上で確認し、意見が分かれた場合は両方を記載します。",
+  "sections": [
+    { "heading": "一次情報を中心にする", "body": "実測、実使用、当事者への取材を一次情報として区別します。メーカー仕様や公的資料は出典と確認日を記載し、転載ではなく判断の根拠として使います。" },
+    { "heading": "広告と評価を分ける", "body": "成果報酬リンクの有無は評価を変更しません。提供品、貸与品、広告を明示し、比較対象の選定理由も説明します。" },
+    { "heading": "更新履歴を残す", "body": "仕様変更、価格変動、再測定を確認した場合は更新日と変更点を追記します。公開日だけを変更して新しく見せることはしません。" }
+  ],
+  "sources": [{"label":"Google Search Central - Helpful content","url":"https://developers.google.com/search/docs/fundamentals/creating-helpful-content"}],
+  "related": ["desk-light-comparison", "home-workspace-setup"], "faq": []
+}
+

@@ -1,3 +1,4 @@
+
 import{PAGE_STATES,normalizePage,splitList,auditPage,buildBrief,jsonLd,exportHtml,escapeHtml}from'./core.js';import{seedPages}from'./data.js';
 const STORE='scarlet.content-os.v2',$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];let state=load(),activeId=state.pages[0]?.id||null,query='',status='すべて';
 function load(){try{return JSON.parse(localStorage.getItem(STORE))||{pages:seedPages}}catch{return{pages:seedPages}}}function save(){localStorage.setItem(STORE,JSON.stringify(state))}function active(){return state.pages.find(p=>p.id===activeId)||normalizePage()}function toast(m){let e=$('#toast');e.textContent=m;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1800)}function dl(name,text,type='text/plain'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();URL.revokeObjectURL(a.href)}

@@ -1,0 +1,2 @@
+
+let idx=[];fetch('/search-index.json').then(r=>r.json()).then(x=>idx=x);const d=document.querySelector('#search'),i=document.querySelector('#searchInput'),o=document.querySelector('.search-open');o?.addEventListener('click',()=>{d.showModal();i.focus()});i?.addEventListener('input',()=>{const q=i.value.toLowerCase();document.querySelector('#searchResults').innerHTML=q?idx.filter(x=>(x.title+' '+x.description).toLowerCase().includes(q)).slice(0,8).map(x=>'<a href="/'+x.slug+'/"><b>'+x.title+'</b><br><small>'+x.description+'</small></a>').join(''):''});

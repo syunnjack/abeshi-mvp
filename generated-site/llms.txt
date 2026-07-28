@@ -1,0 +1,15 @@
+
+# FIELDNOTE
+
+> 道具と方法を実際に検証し、判断に必要な情報を簡潔に届ける独立メディア。
+
+## Content policy
+- Original testing and clearly labeled methodology
+- Sources and update dates on every page
+- Advertising does not change editorial evaluation
+
+## Key pages
+- [デスクライトは照度より配光で選ぶ｜3台を同じ条件で比較](https://example.com/desk-light-comparison/): デスクライト3台を机上面の明るさ、影、映り込み、操作性で比較。数値だけでは分からない選び方を実測結果から説明します。
+- [在宅ワーク環境を整える順番｜予算3万円の実践ガイド](https://example.com/home-workspace-setup/): 椅子、照明、モニター、音環境をどの順番で改善するか。予算3万円で効果を感じやすい組み合わせを解説します。
+- [FIELDNOTEの検証・採点ポリシー](https://example.com/measurement-policy/): 製品比較と実践ガイドで用いる測定、採点、更新、広告表示の基本方針。
+

@@ -1,3 +1,4 @@
+
 {
   "name": "abeshi-mvp",
   "version": "0.1.0",
@@ -6,7 +7,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "test": "node --test"
+    "build:site": "node scripts/generate-site.mjs",
+    "serve:site": "vite generated-site --host 0.0.0.0",
+    "test": "node --test && node scripts/generate-site.mjs --check"
   },
   "devDependencies": {
     "vite": "^7.0.0"

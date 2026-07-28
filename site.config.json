@@ -1,0 +1,16 @@
+
+{
+  "name": "FIELDNOTE",
+  "tagline": "試して、比べて、確かめる。",
+  "description": "道具と方法を実際に検証し、判断に必要な情報を簡潔に届ける独立メディア。",
+  "baseUrl": "https://example.com",
+  "language": "ja",
+  "author": { "name": "FIELDNOTE編集部", "url": "/about/" },
+  "theme": { "accent": "#e34b35", "ink": "#172522", "paper": "#f4f2ea" },
+  "navigation": [
+    { "label": "検証記事", "url": "/category/review/" },
+    { "label": "ガイド", "url": "/category/guide/" },
+    { "label": "編集方針", "url": "/about/" }
+  ]
+}
+
