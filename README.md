@@ -1,94 +1,63 @@
-
 # SCARLET Site System MVP
 
-阿部氏の「無双マイスター」のコンテンツ組成思想を、現代の SEO / AIO / LLMO に合わせて再設計した、実際に公開サイト一式を生成する汎用MVPです。
+阿部氏の「無双マイスター／無双シート／E-Sheet」の考え方を、現代の静的サイト生成、SEO、AIO、LLMO、収益導線へ再設計した汎用サイトシステムです。
 
-## 生成される公開サイト
+旧システムがExcel/VBAでページ素材、キーワード、広告、ランキング、内部リンクを組み立ててCMSへ貼り付ける方式だったのに対し、本MVPは構造化データを入力として、公開サイト一式を再現可能なビルドで生成します。
 
-`content/pages/*.json` と `site.config.json` を入力として、`generated-site/` に次を生成します。
+## 19サイト・ポートフォリオ
 
-- 公開トップページ、記事、カテゴリ、編集方針ページ
-- 直接回答、検証方法、比較表、FAQ、出典、関連記事
-- Article / FAQPage / BreadcrumbList / Organization JSON-LD
-- canonical、OGP、description、公開日・更新日・著者情報
-- sitemap.xml、robots.txt、RSS、llms.txt
-- クライアント内サイト検索用インデックス
-- PWA manifest、レスポンシブCSS
+`portfolio.config.json` に、推奨順の19専門サイト、全146サブジャンル、収益モデル、レビュー区分を定義しています。`domains.config.json` には各サイトのドメイン候補を収録しています。
 
-### 成人向けページと収益導線
+```bash
+npm install
+npm run build:portfolio
+npm run serve:portfolio
+```
 
-ページJSONで `"mature": true` を指定すると、成人向けページとして次を自動生成します。
+生成先は `generated-portfolio/` です。19サイトのトップページ、146件の専門ページ設計、ポートフォリオ一覧を含む166 HTMLを生成します。
 
-- 18歳以上の確認ダイアログ（sessionStorage保存）
-- Google SafeSearch向け `rating=adult` / RTAメタタグ
-- `isFamilyFriendly: false` と `contentRating: 18+`
-- 一覧カードの18+表示と成人向けカテゴリ分離
-- 広告・アフィリエイト開示
-- 記事本文とサイドカラムのCTA枠
-- `rel="sponsored nofollow noopener"`
-- `dataLayer` が存在する場合の `affiliate_click` イベント
+安全な初期状態として、次の制御を入れています。
 
-収益枠は `monetization.config.json` で管理します。公開前に、サンプルURLの `YOUR_AFFILIATE_ID` を提携先から発行されたIDへ置き換えてください。ID未設定はテスト時に警告されます。
+- 全ページを人間レビュー完了まで `noindex`
+- 事実、出典、広告表記、独自情報、更新日の公開前チェック
+- YMYL・プライバシー・成人向けを区分したレビュー要件
+- 広告報酬と独立した比較軸、一次情報、向く人・向かない人の設計
+- 提携設定まで無効な収益枠
+- 成人向けサイトの18歳確認、adult/RTAメタ情報
+
+ドメイン候補は空き状況・商標を保証しません。購入前にレジストラと商標データベースで確認してください。
+
+## 単一サイト版
+
+`content/pages/*.json`、`site.config.json`、`monetization.config.json` から `generated-site/` を生成します。
 
 ```bash
 npm run build:site
 npm run serve:site
 ```
 
-生成前検証は `node scripts/generate-site.mjs --check` で実行できます。必須項目不足とslug重複がある場合は失敗します。
+単一サイト版には、記事・カテゴリ・運営方針ページ、Article / FAQPage / BreadcrumbList / Organization JSON-LD、canonical、OG、sitemap、robots、RSS、llms.txt、サイト内検索、PWA manifest、レスポンシブCSSを含みます。
 
-## 原型から継承したもの
+成人向けページはページJSONで `"mature": true` を指定します。18歳確認、`rating=adult`、RTA、`isFamilyFriendly: false`、PR表示、`rel="sponsored nofollow noopener"` 付きの収益導線を生成します。
 
-提供された3つの `.xlsm` と9つのマニュアルを解析しました。原型は、外部ページソースから素材を抽出し、キーワード・動画/商品・広告・ランキング・内部リンクを部品として組み上げ、完成HTMLをCMSへ渡すExcel/VBAシステムです。
+## コンテンツ制作スタジオ
 
-本MVPは、その「複数ソースを一枚の制作画面で組成する」考え方を継承します。一方、ランダムキーワード混成や検索流入だけを目的にした大量生成は、現在の検索品質方針と合わないため採用していません。
-
-## 現代版の制作フロー
-
-1. 主クエリ、検索意図、対象読者を定義
-2. 冒頭の直接回答と論点別アウトラインを作成
-3. 公式資料・一次情報・独自調査をソース台帳へ登録
-4. 一次体験、著者、主要エンティティ、内部リンクを付与
-5. 100点満点のライブ品質監査と人間レビュー
-6. Article JSON-LD、セマンティックHTMLを出力
-7. 公開後はSearch Console / Bing Webmaster Tools等で計測（次フェーズ）
-
-## MVP機能
-
-- E-Sheet型コンテンツエディタ
-- 検索意図別の設計案生成（ルールベース、外部送信なし）
-- SEO / AIO / LLMO共通の11項目ライブ監査
-- 根拠ソース台帳と利用ページの追跡
-- ページの制作パイプライン管理
-- 読者プレビュー
-- 表示内容に対応するArticle JSON-LD
-- セマンティックHTML出力
-- LocalStorage自動保存、JSONバックアップ/復元
-- レスポンシブUI
-
-## 品質監査の考え方
-
-GoogleはAI Overviews / AI Mode向けに特別なスキーマやAI専用ファイルを要求しておらず、通常のSEO基盤と人に役立つコンテンツを推奨しています。本MVPも、直接回答、十分な説明、根拠、一次体験、著者、エンティティ、内部リンク、表示内容と一致する構造化データを評価します。100点は掲載や引用を保証する指標ではなく、公開前チェックリストです。
-
-## 起動
+ブラウザ上の編集画面では、検索意図、直接回答、本文、FAQ、出典、一次体験、著者、内部リンク、構造化データを管理できます。
 
 ```bash
-npm install
 npm run dev
 ```
+
+## 検証
 
 ```bash
 npm test
 npm run build
 ```
 
+テストは19サイト・146トピック・全生成ページ、内部リンク、noindex、成人向け保護、ドメイン一覧、単一サイト設定を検証します。
+
 ## 技術構成
 
-Vite + Vanilla JavaScript。MVPでは外部AI APIやサーバーを使わず、入力データはブラウザ内だけに保存します。次段階でCMS連携、クロール、Search Console/Bingデータ、AI引用計測、組織権限を追加できる構造です。
-
-## 参照した現行ガイド
-
-- https://developers.google.com/search/docs/appearance/ai-features
-- https://developers.google.com/search/docs/fundamentals/creating-helpful-content
-- https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
+Vite + Vanilla JavaScript + Node.jsです。ビルド時に外部AI APIやデータベースを要求せず、設定とコンテンツをGitで管理できます。次の段階でCMS、計測、アフィリエイトAPI、Search Console / Bing Webmaster Tools、編集承認フローを追加できる構造です。
 
