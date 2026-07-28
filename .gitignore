@@ -1,6 +1,6 @@
-
 node_modules/
 dist/
+generated-portfolio/
 .DS_Store
 *.log
 
