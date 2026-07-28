@@ -41,6 +41,9 @@ npm run serve:network
 各サイトには次を含みます。
 
 - トップページと全146専門ガイド
+- 予算・利用頻度・重視点・契約の柔軟性から3案を自動採点する閲覧者向け診断
+- 月額上限から年間予算枠と1回あたり目安を計算する端末内シミュレーション
+- 19サイト各1本、計19本の公的資料ベース記事と38件の公式出典
 - サイト内検索と検索インデックス
 - 運営者情報、編集方針、広告方針、プライバシー、お問い合わせ
 - canonical、OG、Organization / WebSite / Article / BreadcrumbList JSON-LD
@@ -55,7 +58,7 @@ npm run serve:network
 npm run scaffold:article -- home-appliance televisions
 ```
 
-記事JSONの必須項目、運営者名、連絡先、人間レビューが揃った記事だけ `index` 対象になります。それ以外は自動的に `noindex` を維持します。本文形式は `content/article.schema.json`、サイト別の英字URLは `topic-slugs.config.json`、配色は `site-themes.config.json` で管理します。
+記事JSONの必須項目、運営者名、連絡先、人間レビューが揃った記事だけ `index` 対象になります。それ以外は自動的に `noindex` を維持します。本文形式は `content/article.schema.json`、公的資料ベースの初期記事は `content/network/official-starter-pack.json`、診断ロジックは `scripts/decision-engine.mjs`、サイト別の英字URLは `topic-slugs.config.json`、配色は `site-themes.config.json` で管理します。診断の入力値はブラウザ内だけで計算し、サーバーへ送信・保存しません。
 
 ## 単一サイト版
 
