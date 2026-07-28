@@ -9,6 +9,7 @@
     "build:site": "node scripts/generate-site.mjs && node scripts/enhance-adult.mjs",
     "build:portfolio": "node scripts/generate-portfolio.mjs",
     "build:network": "node scripts/generate-network.mjs",
+    "build:hosting": "node scripts/generate-network.mjs && node scripts/build-hosting.mjs",
     "scaffold:article": "node scripts/scaffold-article.mjs",
     "serve:portfolio": "vite generated-portfolio --host 0.0.0.0",
     "serve:network": "vite generated-network --host 0.0.0.0",
@@ -19,4 +20,3 @@
     "vite": "^7.0.0"
   }
 }
-
