@@ -8,7 +8,7 @@
 
 `portfolio.config.json` に、推奨順の19専門サイト、全146サブジャンル、収益モデル、レビュー区分を定義しています。`domains.config.json` には各サイトのドメイン候補を収録しています。
 
-取得済みドメイン、主ドメインとリダイレクト用ドメイン、取得時費用は `domain-assets.config.json` で管理します。現在は主ドメイン18件と防衛用 `.com` 8件の計26件を記録し、`.com` は同名の `.jp` へ301リダイレクトする設計です。未取得の主候補は `home-lab.jp` です。`home-lab.com` と `family-choice.com` はプレミアム価格のため取得対象から除外し、`family-choice.jp` を正規ドメインとして使用します。
+取得済みドメイン、主ドメインとリダイレクト用ドメイン、取得時費用は `domain-assets.config.json` で管理します。現在は主ドメイン19件と防衛用 `.com` 9件の計28件を記録し、19サイトすべての主ドメインを取得済みです。取得時費用の記録合計は53,248円（税込）です。`.com` は同名の `.jp` へ301リダイレクトします。家電サイトは「KADEN SCOPE」へ変更し、`kaden-scope.jp` を正規ドメイン、`kaden-scope.com` を転送用として使用します。`home-lab.com` と `family-choice.com` はプレミアム価格のため取得対象から除外します。
 
 ```bash
 npm install
