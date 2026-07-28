@@ -130,3 +130,18 @@ test('KADEN SCOPE is generated as the acquired home appliance system site', asyn
   assert.match(rules, /https:\/\/kaden-scope\.com\/\* https:\/\/kaden-scope\.jp\/:splat 301/);
 });
 
+test('visible copy speaks to visitors instead of exposing operator workflow', async () => {
+  const internalWording = /運用管制|公開承認|公開前ドラフト|人間レビュー|CONTENT BLUEPRINT|DRAFT|NOINDEX|Primary domain|DOMAIN COST|published ·|drafts|高単価|継続報酬|収益性/;
+  for (const file of await htmlFiles(output)) {
+    const html = await fs.readFile(file, 'utf8');
+    assert.doesNotMatch(html, internalWording, file);
+  }
+
+  const portal = await fs.readFile(path.join(output, 'index.html'), 'utf8');
+  assert.match(portal, /迷わず選べる、19の専門ガイド/);
+  assert.match(portal, /自分に合う選択肢を見つけられます/);
+
+  const kadenHome = await fs.readFile(path.join(output, 'kaden-scope.jp', 'index.html'), 'utf8');
+  assert.match(kadenHome, /選び方の基準を見る/);
+  assert.match(kadenHome, /広告に左右されない/);
+});
