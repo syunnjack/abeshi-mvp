@@ -81,18 +81,18 @@ test('domain CSV contains one row for every site', async () => {
   assert.equal(rows[0], 'rank,site,brand,domain');
 });
 
-test('registered-domain ledger matches the supplied 26-domain purchase', async () => {
+test('registered-domain ledger covers all 19 sites and 9 redirect domains', async () => {
   const primary = domainAssets.domains.filter(domain => domain.role === 'primary');
   const redirects = domainAssets.domains.filter(domain => domain.role === 'redirect');
   const total = domainAssets.domains.reduce(
-    (sum, domain) => sum + domainAssets.pricingProfiles[domain.profile].firstYearTotal,
+    (sum, domain) => sum + (domainAssets.pricingProfiles[domain.profile]?.firstYearTotal ?? 0),
     0
-  );
-  assert.equal(domainAssets.domains.length, 26);
-  assert.equal(primary.length, 18);
-  assert.equal(redirects.length, 8);
-  assert.equal(total, 49_946);
-  assert.deepEqual(domainAssets.missingPrimaryDomains, ['home-lab.jp']);
+  ) + domainAssets.purchaseOrders.reduce((sum, order) => sum + order.total, 0);
+  assert.equal(domainAssets.domains.length, 28);
+  assert.equal(primary.length, 19);
+  assert.equal(redirects.length, 9);
+  assert.equal(total, 53_248);
+  assert.deepEqual(domainAssets.missingPrimaryDomains, []);
   assert.deepEqual(
     domainAssets.unacquiredPremiumDomains.map(domain => domain.domain),
     ['home-lab.com', 'family-choice.com']
@@ -102,7 +102,22 @@ test('registered-domain ledger matches the supplied 26-domain purchase', async (
 
   const assetRows = (await fs.readFile(path.join(output, 'domain-assets.csv'), 'utf8')).trim().split(/\r?\n/);
   const redirectRows = (await fs.readFile(path.join(output, 'redirect-plan.csv'), 'utf8')).trim().split(/\r?\n/);
-  assert.equal(assetRows.length, 27);
-  assert.equal(redirectRows.length, 9);
+  assert.equal(domainAssets.domains.filter(domain => domain.costStatus === 'not_provided').length, 0);
+  assert.equal(domainAssets.purchaseOrders[0].total, 3_302);
+  assert.deepEqual(domainAssets.purchaseOrders[0].domains, ['kaden-scope.jp', 'kaden-scope.com']);
+  assert.equal(assetRows.length, 29);
+  assert.equal(redirectRows.length, 10);
+});
+
+test('KADEN SCOPE uses the acquired .jp canonical and .com redirect', async () => {
+  const site = portfolio.verticals.find(vertical => vertical.slug === 'home-appliance');
+  assert.equal(site.brand, 'KADEN SCOPE');
+  assert.equal(domains['home-appliance'], 'kaden-scope.jp');
+  assert.ok(domainAssets.domains.some(domain => domain.domain === 'kaden-scope.jp' && domain.role === 'primary'));
+  assert.ok(domainAssets.domains.some(domain => domain.domain === 'kaden-scope.com' && domain.role === 'redirect'));
+  const html = await fs.readFile(path.join(output, '05-home-appliance', 'index.html'), 'utf8');
+  assert.match(html, /<title>家電専門サイトMVP \| KADEN SCOPE<\/title>/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/kaden-scope\.jp\/">/);
+  assert.match(html, /PRIMARY DOMAIN <b>kaden-scope\.jp<\/b>/);
 });
 
