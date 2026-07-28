@@ -15,6 +15,21 @@
 - クライアント内サイト検索用インデックス
 - PWA manifest、レスポンシブCSS
 
+### 成人向けページと収益導線
+
+ページJSONで `"mature": true` を指定すると、成人向けページとして次を自動生成します。
+
+- 18歳以上の確認ダイアログ（sessionStorage保存）
+- Google SafeSearch向け `rating=adult` / RTAメタタグ
+- `isFamilyFriendly: false` と `contentRating: 18+`
+- 一覧カードの18+表示と成人向けカテゴリ分離
+- 広告・アフィリエイト開示
+- 記事本文とサイドカラムのCTA枠
+- `rel="sponsored nofollow noopener"`
+- `dataLayer` が存在する場合の `affiliate_click` イベント
+
+収益枠は `monetization.config.json` で管理します。公開前に、サンプルURLの `YOUR_AFFILIATE_ID` を提携先から発行されたIDへ置き換えてください。ID未設定はテスト時に警告されます。
+
 ```bash
 npm run build:site
 npm run serve:site

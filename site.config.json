@@ -10,6 +10,7 @@
   "navigation": [
     { "label": "検証記事", "url": "/category/review/" },
     { "label": "ガイド", "url": "/category/guide/" },
+    { "label": "成人向け", "url": "/category/adult/" },
     { "label": "編集方針", "url": "/about/" }
   ]
 }

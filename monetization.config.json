@@ -1,0 +1,27 @@
+
+{
+  "enabled": true,
+  "disclosure": "このページには広告・アフィリエイトリンクが含まれます。申込みが成立した場合、運営者が報酬を受け取ることがあります。掲載の有無や報酬額は評価結果に影響しません。",
+  "currency": "JPY",
+  "offers": {
+    "adult-stream-basic": {
+      "badge": "PR / 18+",
+      "title": "見放題プランの公式情報を確認",
+      "description": "料金、解約条件、対応端末を公式ページで確認してから申し込んでください。",
+      "cta": "公式条件を見る",
+      "url": "https://example.com/adult-stream?ref=YOUR_AFFILIATE_ID",
+      "merchant": "提携サービスA",
+      "placement": ["afterAnswer", "sidebar"]
+    },
+    "privacy-tool": {
+      "badge": "PR",
+      "title": "プライバシー保護ツール",
+      "description": "共有端末の閲覧履歴や決済情報を管理するための選択肢を確認できます。",
+      "cta": "機能を確認する",
+      "url": "https://example.com/privacy?ref=YOUR_AFFILIATE_ID",
+      "merchant": "提携サービスB",
+      "placement": ["afterSection", "sidebar"]
+    }
+  }
+}
+

@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "build:site": "node scripts/generate-site.mjs",
+    "build:site": "node scripts/generate-site.mjs && node scripts/enhance-adult.mjs",
     "serve:site": "vite generated-site --host 0.0.0.0",
-    "test": "node --test && node scripts/generate-site.mjs --check"
+    "test": "node --test && node scripts/generate-site.mjs --check && node scripts/enhance-adult.mjs --check"
   },
   "devDependencies": {
     "vite": "^7.0.0"
