@@ -11,6 +11,7 @@ const domains = JSON.parse(await fs.readFile(path.join(root, 'domains.config.jso
 const domainAssets = JSON.parse(await fs.readFile(path.join(root, 'domain-assets.config.json'), 'utf8'));
 const topicSlugs = JSON.parse(await fs.readFile(path.join(root, 'topic-slugs.config.json'), 'utf8'));
 const officialStarterPack = JSON.parse(await fs.readFile(path.join(root, 'content', 'network', 'official-starter-pack.json'), 'utf8'));
+const officialProductCatalog = JSON.parse(await fs.readFile(path.join(root, 'content', 'products', 'official-starter-catalog.json'), 'utf8'));
 const policyRoutes = ['about', 'editorial-policy', 'advertising-policy', 'privacy', 'contact', 'search'];
 
 async function htmlFiles(directory) {
@@ -182,6 +183,24 @@ test('every guide includes the private automatic choice simulator', async () => 
       assert.match(html, /月額・維持費の上限/);
       assert.match(html, /<script type="module"/);
     }
+  }
+});
+
+test('source-backed guides match diagnosis routes to 57 concrete official candidates', async () => {
+  assert.equal(officialProductCatalog.length, 19);
+  assert.equal(new Set(officialProductCatalog.map(catalog => `${catalog.site}:${catalog.slug}`)).size, 19);
+  assert.equal(officialProductCatalog.reduce((total, catalog) => total + catalog.candidates.length, 0), 57);
+
+  for (const catalog of officialProductCatalog) {
+    assert.equal(catalog.checkedAt, '2026-07-29');
+    assert.deepEqual(new Set(catalog.candidates.map(candidate => candidate.fit)), new Set(['cost', 'balance', 'assurance']));
+    assert.ok(catalog.candidates.every(candidate => /^https:\/\//.test(candidate.url)));
+    assert.ok(catalog.candidates.every(candidate => candidate.name && candidate.reason && candidate.caution && candidate.price));
+
+    const html = await fs.readFile(path.join(output, domains[catalog.site], 'guides', catalog.slug, 'index.html'), 'utf8');
+    assert.match(html, /条件に合いやすい具体候補/);
+    assert.equal([...html.matchAll(/data-candidate(?:\s|>)/g)].length, 3);
+    for (const candidate of catalog.candidates) assert.match(html, new RegExp(candidate.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
   }
 });
 
