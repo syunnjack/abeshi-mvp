@@ -1,6 +1,7 @@
 node_modules/
 dist/
 generated-portfolio/
+generated-network/
 .DS_Store
 *.log
 
