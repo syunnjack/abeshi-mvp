@@ -29,6 +29,34 @@ npm run serve:portfolio
 
 ドメイン候補は空き状況・商標を保証しません。購入前にレジストラと商標データベースで確認してください。
 
+## 19サイト独立配備システム
+
+`build:network` は、19個の正規ドメインごとに独立して配備できるサイト一式を `generated-network/<domain>/` へ生成します。
+
+```bash
+npm run build:network
+npm run serve:network
+```
+
+各サイトには次を含みます。
+
+- トップページと全146専門ガイド
+- サイト内検索と検索インデックス
+- 運営者情報、編集方針、広告方針、プライバシー、お問い合わせ
+- canonical、OG、Organization / WebSite / Article / BreadcrumbList JSON-LD
+- sitemap.xml、robots.txt、RSS、llms.txt、PWA manifest
+- 公開承認台帳、サイト別監査レポート、セキュリティヘッダー
+- `.com` から正規 `.jp` への301転送ルール
+- 成人向けサイト全ページの18歳確認とadult/RTAメタ情報
+
+記事は次のコマンドで下書きを作成できます。
+
+```bash
+npm run scaffold:article -- home-appliance televisions
+```
+
+記事JSONの必須項目、運営者名、連絡先、人間レビューが揃った記事だけ `index` 対象になります。それ以外は自動的に `noindex` を維持します。本文形式は `content/article.schema.json`、サイト別の英字URLは `topic-slugs.config.json`、配色は `site-themes.config.json` で管理します。
+
 ## 単一サイト版
 
 `content/pages/*.json`、`site.config.json`、`monetization.config.json` から `generated-site/` を生成します。
