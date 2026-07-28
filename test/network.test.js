@@ -10,6 +10,7 @@ const portfolio = JSON.parse(await fs.readFile(path.join(root, 'portfolio.config
 const domains = JSON.parse(await fs.readFile(path.join(root, 'domains.config.json'), 'utf8'));
 const domainAssets = JSON.parse(await fs.readFile(path.join(root, 'domain-assets.config.json'), 'utf8'));
 const topicSlugs = JSON.parse(await fs.readFile(path.join(root, 'topic-slugs.config.json'), 'utf8'));
+const officialStarterPack = JSON.parse(await fs.readFile(path.join(root, 'content', 'network', 'official-starter-pack.json'), 'utf8'));
 const policyRoutes = ['about', 'editorial-policy', 'advertising-policy', 'privacy', 'contact', 'search'];
 
 async function htmlFiles(directory) {
@@ -145,3 +146,42 @@ test('visible copy speaks to visitors instead of exposing operator workflow', as
   assert.match(kadenHome, /選び方の基準を見る/);
   assert.match(kadenHome, /広告に左右されない/);
 });
+
+test('official starter pack adds one source-backed article to every site', async () => {
+  assert.equal(officialStarterPack.length, 19);
+  assert.equal(new Set(officialStarterPack.map(article => article.site)).size, 19);
+
+  for (const article of officialStarterPack) {
+    assert.ok(topicSlugs[article.site]?.includes(article.slug), `${article.site}:${article.slug}`);
+    assert.equal(article.status, 'review');
+    assert.equal(article.reviewedAt, '2026-07-29');
+    assert.ok(article.answer.length >= 80);
+    assert.ok(article.sections.length >= 2);
+    assert.ok(article.sources.length >= 2);
+    assert.ok(article.sources.every(source => source.url.startsWith('https://')));
+    assert.ok(article.sources.every(source => source.checkedAt === '2026-07-29'));
+
+    const domain = domains[article.site];
+    const html = await fs.readFile(path.join(output, domain, 'guides', article.slug, 'index.html'), 'utf8');
+    assert.match(html, new RegExp(article.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+    assert.match(html, /SCARLETリサーチ/);
+  }
+});
+
+test('every guide includes the private automatic choice simulator', async () => {
+  for (const site of portfolio.verticals) {
+    const siteRoot = path.join(output, domains[site.slug]);
+    await fs.access(path.join(siteRoot, 'assets', 'decision-engine.js'));
+    const client = await fs.readFile(path.join(siteRoot, 'assets', 'site.js'), 'utf8');
+    assert.match(client, /evaluateDecision/);
+
+    for (const slug of topicSlugs[site.slug]) {
+      const html = await fs.readFile(path.join(siteRoot, 'guides', slug, 'index.html'), 'utf8');
+      assert.match(html, /class="decision-tool"/);
+      assert.match(html, /入力内容はこの端末内だけで計算され、送信・保存されません/);
+      assert.match(html, /月額・維持費の上限/);
+      assert.match(html, /<script type="module"/);
+    }
+  }
+});
+
