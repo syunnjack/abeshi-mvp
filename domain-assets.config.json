@@ -19,6 +19,15 @@
       "firstYearTotal": 949
     }
   },
+  "purchaseOrders": [
+    {
+      "id": "kaden-scope-2026-07",
+      "domains": ["kaden-scope.jp", "kaden-scope.com"],
+      "termYears": 1,
+      "total": 3302,
+      "individualBreakdown": "not_provided"
+    }
+  ],
   "domains": [
     {"domain":"beauty-evidence.jp","vertical":"beauty","role":"primary","profile":"jp"},
     {"domain":"city-field.jp","vertical":"local-guide","role":"primary","profile":"jp"},
@@ -26,6 +35,8 @@
     {"domain":"family-choice.jp","vertical":"parenting","role":"primary","profile":"jp"},
     {"domain":"hobby-signal.jp","vertical":"hobby-entertainment","role":"primary","profile":"jp"},
     {"domain":"hobby-signal.com","vertical":"hobby-entertainment","role":"redirect","profile":"com"},
+    {"domain":"kaden-scope.jp","vertical":"home-appliance","role":"primary","profile":null,"costStatus":"grouped_total","purchaseOrderId":"kaden-scope-2026-07"},
+    {"domain":"kaden-scope.com","vertical":"home-appliance","role":"redirect","profile":null,"costStatus":"grouped_total","purchaseOrderId":"kaden-scope-2026-07"},
     {"domain":"learnmap.jp","vertical":"learning","role":"primary","profile":"jp"},
     {"domain":"living-field.jp","vertical":"home-living","role":"primary","profile":"jp"},
     {"domain":"living-field.com","vertical":"home-living","role":"redirect","profile":"com"},
@@ -47,12 +58,12 @@
     {"domain":"workshift-guide.jp","vertical":"work-career","role":"primary","profile":"jp"},
     {"domain":"workshift-guide.com","vertical":"work-career","role":"redirect","profile":"com"}
   ],
-  "missingPrimaryDomains": ["home-lab.jp"],
+  "missingPrimaryDomains": [],
   "unacquiredPremiumDomains": [
     {
       "domain": "home-lab.com",
       "reason": "premium_price",
-      "action": "取得せず、主候補home-lab.jpの取得可否を優先確認"
+      "action": "取得せず、kaden-scope.jpを正規ドメインとして使用"
     },
     {
       "domain": "family-choice.com",
@@ -65,7 +76,9 @@
     ".jpを正規ドメインとして使用する",
     ".comは対応する.jpへ301リダイレクトする",
     "更新時の料金は取得時の表示額と異なる可能性があるため更新前に再確認する",
-    "プレミアム.comは取得せず、既存.jpの運営・コンテンツ・被リンクへ予算を優先する"
+    "プレミアム.comは取得せず、既存.jpの運営・コンテンツ・被リンクへ予算を優先する",
+    "kaden-scope.comはkaden-scope.jpへ301リダイレクトする",
+    "kaden-scope.jpとkaden-scope.comは1年契約2件合計3,302円として記録し、個別内訳は配賦しない"
   ]
 }
 
