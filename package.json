@@ -1,4 +1,3 @@
-
 {
   "name": "abeshi-mvp",
   "version": "0.1.0",
@@ -8,8 +7,10 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "build:site": "node scripts/generate-site.mjs && node scripts/enhance-adult.mjs",
+    "build:portfolio": "node scripts/generate-portfolio.mjs",
+    "serve:portfolio": "vite generated-portfolio --host 0.0.0.0",
     "serve:site": "vite generated-site --host 0.0.0.0",
-    "test": "node --test && node scripts/generate-site.mjs --check && node scripts/enhance-adult.mjs --check"
+    "test": "node --test && node scripts/generate-site.mjs --check && node scripts/enhance-adult.mjs --check && node scripts/generate-portfolio.mjs --check"
   },
   "devDependencies": {
     "vite": "^7.0.0"
