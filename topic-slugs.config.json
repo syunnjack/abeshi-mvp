@@ -1,0 +1,22 @@
+{
+  "tech-stack": ["pc","smartphones","tablets","ai-tools","saas","cloud","vpn","web-hosting","domains","security","apps","peripherals"],
+  "business-ops": ["store-equipment","manufacturing-equipment","logistics","recruiting","business-communications","pos","payment-terminals","office-supplies"],
+  "work-career": ["career-change","jobs","side-business","freelance","coworking","productivity","accounting-software","crm","attendance-management"],
+  "learning": ["certifications","languages","online-courses","programming","learning-materials","tutors","learning-apps","distance-learning"],
+  "home-appliance": ["televisions","vacuum-cleaners","air-conditioners","refrigerators","washing-machines","lighting","audio","cameras","beauty-appliances","cooking-appliances"],
+  "travel": ["hotels","ryokan","hot-springs","flights","rental-cars","travel-goods","attractions","campgrounds"],
+  "home-living": ["furniture","bedding","storage","diy","tools","home-equipment","renovation","moving","interior","disaster-preparedness"],
+  "outdoor": ["camping","mountaineering","fishing","cycling","surfing","running","travel-gear"],
+  "beauty": ["cosmetics","skin-care","hair-care","hair-removal","esthetic","salons","aesthetic-medicine-basics"],
+  "mobility": ["cars","motorcycles","bicycles","car-accessories","insurance-comparison","car-sharing","ev-charging"],
+  "food": ["coffee","beverages","alcohol","frozen-food","meal-delivery","regional-specialties","cookware","food-subscriptions"],
+  "hobby-entertainment": ["games","ebooks","video-streaming","music-streaming","anime","models","instruments","photography","handmade"],
+  "pet-life": ["pet-food","pet-supplies","pet-insurance","pet-hotels","training","pet-monitors","animal-hospitals"],
+  "local-guide": ["restaurants","saunas","karaoke","internet-cafes","cinemas","parking","local-services","store-rankings"],
+  "health-fitness": ["fitness","sports-goods","sleep","protein","healthy-meal-delivery","health-apps"],
+  "matching": ["matchmaking-services","dating-services","marriage-agencies","communication-learning"],
+  "parenting": ["baby-products","educational-toys","school-supplies","photo-services","family-facilities"],
+  "finance-tools": ["household-budgeting","accounting","payment-services","reward-points","business-cards","invoice-services"],
+  "adult": ["adult-streaming","adult-ebooks","adult-products","live-chat","nightlife","privacy-products","adult-games"]
+}
+
