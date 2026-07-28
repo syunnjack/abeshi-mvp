@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.9 seconds
-Output:
 export const PAGE_STATES=["企画","執筆中","レビュー","公開準備","公開済み"];
 export const INTENTS=["知りたい","比較したい","やってみたい","購入したい","行きたい"];
 export function createId(prefix="page"){return `${prefix}_${Date.now().toString(36)}_${Math.random().toString(36).slice(2,7)}`}

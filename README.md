@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 1.6 seconds
-Output:
 # SCARLET Content OS
 
 阿部氏の「無双マイスター」のコンテンツ組成思想を、現代の SEO / AIO / LLMO に合わせて再設計した汎用MVPです。
