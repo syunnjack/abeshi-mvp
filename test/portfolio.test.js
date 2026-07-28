@@ -8,6 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'generated-portfolio');
 const portfolio = JSON.parse(await fs.readFile(path.join(root, 'portfolio.config.json'), 'utf8'));
 const domains = JSON.parse(await fs.readFile(path.join(root, 'domains.config.json'), 'utf8'));
+const domainAssets = JSON.parse(await fs.readFile(path.join(root, 'domain-assets.config.json'), 'utf8'));
 const pad = value => String(value).padStart(2, '0');
 const siteDirectory = site => `${pad(site.rank)}-${site.slug}`;
 
@@ -78,5 +79,30 @@ test('domain CSV contains one row for every site', async () => {
   const rows = (await fs.readFile(path.join(output, 'domains.csv'), 'utf8')).trim().split(/\r?\n/);
   assert.equal(rows.length, 20);
   assert.equal(rows[0], 'rank,site,brand,domain');
+});
+
+test('registered-domain ledger matches the supplied 26-domain purchase', async () => {
+  const primary = domainAssets.domains.filter(domain => domain.role === 'primary');
+  const redirects = domainAssets.domains.filter(domain => domain.role === 'redirect');
+  const total = domainAssets.domains.reduce(
+    (sum, domain) => sum + domainAssets.pricingProfiles[domain.profile].firstYearTotal,
+    0
+  );
+  assert.equal(domainAssets.domains.length, 26);
+  assert.equal(primary.length, 18);
+  assert.equal(redirects.length, 8);
+  assert.equal(total, 49_946);
+  assert.deepEqual(domainAssets.missingPrimaryDomains, ['home-lab.jp']);
+  assert.deepEqual(
+    domainAssets.unacquiredPremiumDomains.map(domain => domain.domain),
+    ['home-lab.com', 'family-choice.com']
+  );
+  assert.ok(redirects.every(domain => domain.domain.endsWith('.com')));
+  assert.ok(primary.every(domain => domain.domain.endsWith('.jp')));
+
+  const assetRows = (await fs.readFile(path.join(output, 'domain-assets.csv'), 'utf8')).trim().split(/\r?\n/);
+  const redirectRows = (await fs.readFile(path.join(output, 'redirect-plan.csv'), 'utf8')).trim().split(/\r?\n/);
+  assert.equal(assetRows.length, 27);
+  assert.equal(redirectRows.length, 9);
 });
 
